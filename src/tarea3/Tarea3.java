@@ -5,26 +5,26 @@ package tarea3;
 
 public class Tarea3 {
     public static void main(String[] args) {
-        int valor;
-        Scanner desicion=new Scanner(System.in);
-        int ress=0;
+        int valor;                                     //variables para la opcion contar digitos
+        Scanner desicion=new Scanner(System.in);  
+        int ress=0;                      
         int conta=0;
         int div=10;
         
-        int a=0;
+        int a=0;                                       //variables para la opcion tres numeros de mayor a menor
         int b=0;
         int c=0;
         
-        int matriz [][]= new int[6][6];
+        int matriz [][]= new int[6][6];                //varibles para la opcion de calcular promedio
         Scanner dentro = new Scanner(System.in);
-        int promedio1=0;
-        int promedio2=0;
+        int promedio1=0;                        
+        int promedio2=0;              
         int promedio3=0;
         int promedio4=0;
         int promedio5=0;
         int promedio6=0;
- int numero = 0;
- while(numero !=5){
+ int numero = 0;                                       //variable para elegir una opcion del menu
+ while(numero !=5){                                    //ciclo del menu principal
  Scanner entrada = new Scanner(System.in);
  System.out.println("[IPC1]Tarea3_201504138");
  System.out.println("1.Usuarios");
@@ -34,10 +34,10 @@ public class Tarea3 {
  System.out.println("5.Salir");
  numero = entrada.nextInt();
    switch(numero){
-    case 1:  
-        String usuario[]= new String[5];
+    case 1:                                             //opcion 1 usuarios
+        String usuario[]= new String[5];                //arreglo para almacenar los usuarios
         int opcion=0;
-        while(opcion!=4){
+        while(opcion!=4){                                //sub menu de usuarios
         Scanner tecla = new Scanner(System.in);
         System.out.println("1.Ingresar Usuarios");
         System.out.println("2.Mostrar Usuarios Ascendente");
@@ -45,35 +45,35 @@ public class Tarea3 {
         System.out.println("4.Menu Principal");
         opcion = tecla.nextInt(); 
            switch(opcion){
-               case 1: 
-                    Scanner guardar = new Scanner(System.in);
+               case 1:                                          //almacena los usuarios
+                    Scanner guardar = new Scanner(System.in);     
                       for(int i=0; i<usuario.length; i++){          
                       System.out.print("Ingrese Usuarios "+(i+1)+":");
                       usuario[i] = guardar.next();   
                       }          
                break;
-               case 2: 
+               case 2:                                          //muestra los usuarios en forma ascendente
                     System.out.println(usuario[4]);
                     System.out.println(usuario[3]);
                     System.out.println(usuario[2]);
                     System.out.println(usuario[1]);
                     System.out.println(usuario[0]);
                break;
-               case 3:
+               case 3:                                        //muestra los usuarios en forma descendente
                    System.out.println(usuario[0]);
                    System.out.println(usuario[1]);
                    System.out.println(usuario[2]);
                    System.out.println(usuario[3]);
                    System.out.println(usuario[4]);
                 break;
-                case 4: break;
+                case 4: break;                                //sale de opcion usuarios
            }        
         }
         
     break;
-    case 2:
+    case 2:                                                   //opcion contador de digitos
         int entrar=0;
-        while(entrar!=3){
+        while(entrar!=3){                                      //submenu contador de digitoz
         Scanner partida = new Scanner(System.in);
         System.out.println("1.Ingresar Número");
         System.out.println("2.Mostrar Dígitos del Número");
@@ -81,12 +81,12 @@ public class Tarea3 {
         entrar = partida.nextInt();    
            
            switch(entrar){
-                case 1: 
+                case 1:                                             //almacena el numero
                      
                    System.out.println("Ingrese un Número");
                    valor=desicion.nextInt();
-                   if(valor>0 && valor<100000){
-                          do{
+                   if(valor>0 && valor<100000){                    //verifica que este dentro del rango indicado
+                          do{                                       //ciclo para contar digitos
                             ress=valor/div;
                             conta++;
                             div=div*10;
@@ -94,21 +94,21 @@ public class Tarea3 {
                    }else System.out.println("el numero no esta dentro del rango");
                    
                 break;
-                case 2:
+                case 2:                                             //muestra los digitos del numero
                    
                    System.out.println("Los digitos del númeroson: "+conta+".");
                  
                 break;
-                case 3: break;
+                case 3: break;                                      //sale de la opcion contador de diguitos
         }        
         }     
                 
               
     break;
-    case 3:
+    case 3:                                                        //opcion numeris de mayor a menor
           
         int ingreso=0;
-        while(ingreso!=3){
+        while(ingreso!=3){                                         //submenu numeros de mayor a menor
         Scanner abierto = new Scanner(System.in);
         System.out.println("1.Ingresar Números");
         System.out.println("2.Mostrar ordenados");
@@ -116,7 +116,7 @@ public class Tarea3 {
         ingreso = abierto.nextInt();  
             
            switch(ingreso){        
-                case 1: 
+                case 1:                                            //almacena los 3 numeros
                    Scanner a1=new Scanner(System.in);
                    Scanner a2=new Scanner(System.in);
                    Scanner a3=new Scanner(System.in); 
@@ -129,7 +129,7 @@ public class Tarea3 {
                    c= a3.nextInt();
                  
                 break;
-                case 2: 
+                case 2:                                              //compara los numeros para ordenarlos y muestra la opcion
                    if(a>b && b>c){
                       System.out.println("De Mayor a Menor: "+a+","+b+","+c+".");
                    }else
@@ -150,14 +150,14 @@ public class Tarea3 {
                    }
                    
                 break;
-                case 3: break;
+                case 3: break;                                    // sale de la opcion mayor a menor
                
             }   
         }
     break;
-    case 4:      
+    case 4:                                                      //opcion calculo de promediio
         int ent=0;
-        while(ent!=3){
+        while(ent!=3){                                            //submeu calculo de pronedio
         Scanner par = new Scanner(System.in);
         System.out.println("1.Ingresar Alumnos");
         System.out.println("2.Mostrar Promedio");
@@ -166,7 +166,7 @@ public class Tarea3 {
         
         
            switch(ent){
-               case 1: 
+               case 1:                                              //almacena los datos de los alumnos
                    
                    
                    System.out.println("Ingrese datos del alumno 1:");
@@ -241,7 +241,7 @@ public class Tarea3 {
                    System.out.println("Ingrese Nota 4");
                    matriz[5][4]=entrada.nextInt();
                    
-                   promedio1=((matriz[0][1]+matriz[0][2]+matriz[0][3]+matriz[0][4])/4);
+                   promedio1=((matriz[0][1]+matriz[0][2]+matriz[0][3]+matriz[0][4])/4);       //calcula los promedios de cada alumno y los almacen en una variable
                    matriz[0][5]= (int)promedio1;
                    
                    promedio2=((matriz[1][1]+matriz[1][2]+matriz[1][3]+matriz[1][4])/4);
@@ -261,7 +261,7 @@ public class Tarea3 {
                    
                 break;
                 case 2: 
-                  for(int fila=0; fila<matriz.length; fila++){
+                  for(int fila=0; fila<matriz.length; fila++){                                  //muestra la matriz con los datos de los alumnos y su promedio
                        for(int columna=0; columna<matriz.length; columna++){
                            System.out.print(matriz[fila][columna]+"\t");    
                        }
@@ -270,7 +270,7 @@ public class Tarea3 {
                   
                   
                 break;
-                case 3: break;
+                case 3: break;                                                                 //sale de la opcion caculo de promedio
            
         }
         
@@ -279,9 +279,9 @@ public class Tarea3 {
         
         
     break;
-    case 5: 
+    case 5:                                                                                     //sale del menu principal
     break;
-            default: System.out.print("ERROR OPCION NO VALIDA");
+            default: System.out.print("ERROR OPCION NO VALIDA");                                //muestra error al no elegir ninguna opcion del menu principal
         }
            
         }
@@ -295,3 +295,4 @@ public class Tarea3 {
     
     
 
+ 
